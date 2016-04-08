@@ -13,6 +13,7 @@ if (process.env.NODE_ENV === 'development') {
   var webpackHotMiddleware = require('webpack-hot-middleware');
   var webpack = require('webpack');
   var config = require('./webpack.config');
+  config.entry.push('webpack-hot-middleware/client');
   var compiler = webpack(config);
   var middleware = webpackDevMiddleware(compiler, { 
     noInfo: true, stats: { colors: true }, publicPath: config.output.publicPath

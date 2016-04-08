@@ -6,7 +6,6 @@ var CLIENT_PATH = path.resolve(ROOT_PATH, 'client');
 
 module.exports = {
   entry: [
-    'webpack-hot-middleware/client',
     './client/index.js'
   ],
   output: {
