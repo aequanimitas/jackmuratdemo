@@ -18,6 +18,7 @@ if (process.env.NODE_ENV === 'development') {
     noInfo: true, stats: { colors: true }, publicPath: config.output.publicPath
   });
 
+  app.use(express.static('static'))
   app.use(middleware); 
   app.use(webpackHotMiddleware(compiler));
 
