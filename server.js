@@ -28,8 +28,8 @@ if (process.env.NODE_ENV === 'development') {
     res.end();
   });
 } else {
-  app.use(express.static('static'))
-  app.use(express.static(__dirname + '/dist'));
+  app.use('/dist', express.static(__dirname + '/dist'));
+  app.use('/static', express.static(__dirname + '/static'));
   app.get('/', function response(req, res) {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
   });

@@ -9,7 +9,7 @@ let App = React.createClass({
   render() {
     return(
       <div className="container main">
-        <a href="/"><img src="/jmc.png" alt="" className="img" /></a>
+        <a href="/"><img src="/static/jmc.png" alt="" className="img" /></a>
         <Nav />
         { this.props.children }
       </div>)
